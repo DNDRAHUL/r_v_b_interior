@@ -1,3 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+
+.wrapper { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 90%; /* Adjust width as needed */
+    background: #fff;
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px rgba(254, 236, 164, 1);
+} 
+
+.wrapper h2 { 
+	text-align: center; 
+	margin-bottom: 30px; 
+	text-transform: uppercase; 
+	letter-spacing: 1px; 
+	color: #332902; 
+} 
+
+.wrapper .input_field { 
+	margin-bottom: 15px; 
+} 
+
+.wrapper 
+	.input_field 
+	input[type="text"], 
+.wrapper textarea { 
+	border: 1px solid #e0e0e0; 
+	width: 77%; 
+	padding: 15px;
+    margin-left: 10%;
+} 
+
+.wrapper textarea { 
+	resize: none; 
+	height: 100px; 
+} 
+
+.wrapper .btn input[type="submit"] { 
+	border: 20px; 
+	padding: 12px; 
+	width: 80%; 
+	background: #569a4d; 
+	color: #fcfbf7; 
+	text-transform: uppercase; 
+	letter-spacing: 2px; 
+	font-weight: bold; 
+	border-radius: 10px; 
+	cursor: pointer; 
+    margin-left: 10%;
+} 
+
+#error_message { 
+	margin-bottom: 20px; 
+	background: #fe8b8e; 
+	padding: 0px; 
+	text-align: center; 
+	font-size: 14px; 
+	transition: all 0.5s ease; 
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .wrapper {
+        top: calc(50% + 50px); /* Pushing down the form by 50px from the vertical center */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; /* Adjust width as needed */
+        position: relative;
+    }
+
+    .main-background{
+        text-align: center;
+        margin: 10px 0 30px 0;
+        transform: translate(0, -20%);
+    }
+}
+
+@media screen and (min-width: 769px) and (orientation: landscape) {
+    .wrapper {
+        top: 50%;
+        left: auto;
+        right: 0;
+        transform: translate(-10%, -40%);
+    }
+}
+
+/* @media screen and (orientation:landscape) {
+
+    .wrapper {
+        display: flex;
+        z-index: 9;
+    }
+} */
+
+
+/* -----------------------------OLD CSSS------------------------------------------------------ */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -974,8 +1076,8 @@ footer{
 
 @media screen and (min-width:992px) and (max-width:1199px) {
     .nav-main .nav-logo {
-        width: 80px;
-        height: 80px;
+        border-radius: 50%;
+        background-color: #ffce00;
     }
 
     .nav-main .brand .brand-name {
