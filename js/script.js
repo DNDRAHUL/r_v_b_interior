@@ -111,6 +111,27 @@ function validate() {
             errors.join("<br>"); 
         return false;} 
     else {  console.log('Hello Rahul');
+
+    const data = {
+        client_message: message,
+        client_type: client,
+        contact_number: contact,
+        email_id: email,
+        name: name
+      };
+
+    Email.send({
+        SecureToken : "106bd400-3074-4cad-93e1-1cd5873dcb52 ",
+        To : 'interionoreplay@gmail.com',
+        From : "interionoreplay@gmail.com",
+        Subject: `Enquiry From ${data.name}`,
+            Body: `Hi Viren,<br>Please find the new customer details as follows:<br>
+                   Name: ${data.name}<br>
+                   Contact Number: ${data.contact_number}<br>
+                   Email: ${data.email}<br>
+                   Message: ${data.message}<br>`
+    });
+
         alert( 
             "Form Submitted Successfully!"); 
         return true;}}
